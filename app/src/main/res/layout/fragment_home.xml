@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d6eaf8"
+    tools:context=".Fragment_Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/mainLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/space"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/topgraph"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/sp_main2"
+                    android:orientation="vertical">
+                    <!--막대그래프-->
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/sp_main"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/nanumgothic"
+                        android:layout_weight="1"
+                        android:padding="3dp"
+                        android:text="     내 학습 정보     " />
+
+                    <com.github.mikephil.charting.charts.BarChart
+                        android:id="@+id/barchart"
+                        android:layout_margin="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/space2"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sp_main2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/space3"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:id="@+id/field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:orientation="horizontal"
+                        tools:layout_editor_absoluteX="8dp"
+                        tools:layout_editor_absoluteY="290dp">
+
+                        <TextView
+                            android:id="@+id/textView8"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:fontFamily="@font/nanumgothic"
+                            android:text="금일암기량" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="누적암기량" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:fontFamily="@font/nanumgothic"
+                            android:text="주 평균" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:fontFamily="@font/nanumgothic"
+                            android:text="정답률" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/today"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="0개"
+                            android:textColor="#000"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/cumul"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="0개"
+                            android:textColor="#000"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/avgweek"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="0개"
+                            android:textColor="#000"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/rate"
+                            android:layout_width="98dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="00%"
+                            android:textColor="#000"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/space6"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/Tier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/sp_main2"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/space10"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:text="" />
+
+                    <LinearLayout
+                        android:id="@+id/level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/space9"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sp_main"
+                            android:gravity="center"
+                            android:text="My Tier"
+                            android:padding="3dp"
+                            android:fontFamily="@font/nanumgothic"
+                            android:textColor="#fff"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/space1"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:text="" />
+
+                        <Button
+                            android:id="@+id/exp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumgothic"
+                            android:text="000/2000" />
+
+                        <TextView
+                            android:id="@+id/tlevel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Level 0" />
+
+                        <TextView
+                            android:id="@+id/space11"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pvpinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/space8"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:text="" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="60dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/tier1_tmp" />
+
+                        <TextView
+                            android:id="@+id/rating"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="Rating 0000(상위 00.0%)"
+                            android:textColor="#000"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/pan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/nanumgothic"
+                            android:gravity="center"
+                            android:text="00전 00승 00패"
+                            android:textColor="#000"
+                            android:textSize="17dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/space12"
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:text="" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/space7"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/todayword"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/sp_main2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/sp_main"
+                        android:text="    오늘의 영단어    "
+                        android:fontFamily="@font/nanumgothic"
+                        android:textColor="#fff"
+                        android:textSize="16dp"
+                        android:padding="3dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/today_voca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="reform"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/nanumgothic"
+                        android:textColor="#000"
+                        android:textSize="50dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/today_pronounce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="[reform]" />
+
+                    <TextView
+                        android:id="@+id/today_mean"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:fontFamily="@font/nanumgothic"
+                        android:text="1. 개혁[개선] 하다"
+                        android:textColor="#000"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/space13"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text=""
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="551dp" />
+
+                <LinearLayout
+                    android:id="@+id/alarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@drawable/sp_main2"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="762dp">
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textStyle="bold"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/sp_main"
+                        android:fontFamily="@font/nanumgothic"
+                        android:padding="3dp"
+                        android:text="공지" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanumgothic"
+                        android:textStyle="bold"
+                        android:text="오픈 이벤트! 선착순 100명" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/nanumgothic"
+                        android:textStyle="bold"
+                        android:text="2000.00.00" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/space14"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text=""
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="551dp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

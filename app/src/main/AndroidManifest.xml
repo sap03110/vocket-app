@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.vocket">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity_pvp"></activity>
+        <activity android:name=".Activity_Retest" />
+        <activity android:name=".Activity_Test" />
+        <activity android:name=".Activity_Test_Result" />
+        <activity android:name=".Activity_MyNote_2" />
+        <activity android:name=".Activity_VocaFrame" />
+        <activity android:name=".Activity_BasicNote" />
+        <activity
+            android:name=".Activity_OcrAdd"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Activity_MyNote" />
+        <activity android:name=".Activity_Ocr" />
+        <activity android:name=".Activity_Howto" />
+        <activity android:name=".Activity_Vocket" />
+        <activity android:name=".Activity_Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activity_LogIn" />
+    </application>
+
+</manifest>

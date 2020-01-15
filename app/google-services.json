@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "349968955547",
+    "firebase_url": "https://vocket-591b1.firebaseio.com",
+    "project_id": "vocket-591b1",
+    "storage_bucket": "vocket-591b1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349968955547:android:238e47bed63e64ed732e3e",
+        "android_client_info": {
+          "package_name": "com.example.vocket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349968955547-9h3kf4d89q9ucsk81837umvgh1m4bl4k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtB1c6h2RQp4r1QJH4eplYQKAnyKEMYuc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349968955547-9h3kf4d89q9ucsk81837umvgh1m4bl4k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

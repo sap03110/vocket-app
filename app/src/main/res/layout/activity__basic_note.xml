@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_BasicNote">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:onClick="Back"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back2" />
+
+    <TextView
+        android:id="@+id/textView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/nanumgothic"
+        android:text="기본 영단어"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#999"
+        android:layout_marginTop="18dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+    <ScrollView
+        android:id="@+id/basicScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/Line">
+
+        <LinearLayout
+            android:id="@+id/basicNoteList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView39">
+
+            <LinearLayout
+                android:id="@+id/basicToeic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="59dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/toeic" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:fontFamily="@font/nanumgothic"
+                    android:layout_weight="0"
+                    android:text="토익 (TOEIC)"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_toeic_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [초급] 토익이 처음이라면? 기초 영단어 for 영포자" />
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toeic_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [중급] 공대생이라면 750점은 나와야쥬?" />
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toeic_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 신토익 필수! 새로운 유형에 대비하는 단어 모음 200선" />
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toeic_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 900+을 위한 영단어 모음" />
+
+            <TextView
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/basicTeps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="59dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/teps" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="텝스 (TEPS)"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_teps_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [초급] 어휘파트 시간이 부족하다면 먼저 이것부터!" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_teps_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [중급] 연세대 가고싶어요! 301점만 넘기는 텝스 빈출 단어" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_teps_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [중급] 리스닝 240점 맞는 빈출 단어 모음" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_teps_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [고급] 텝스 고오오오오오오오오오ㅡ급 단어" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/basicToefl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="59dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/toefl" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="토플 (TOEFL)"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_toefl_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [초급] 시사 교양 어휘 200선" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toefl_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:fontFamily="@font/nanumgothic"
+                android:gravity="center_vertical"
+                android:text="   [중급] 해커스 토플 초록이" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toefl_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [중급] 500개로 정리한 토플 적중 단어 모음" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_toefl_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 독해가 어려워요 ㅠㅠㅠㅠ" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/basicPublicc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="49dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:layout_marginLeft="5dp"
+                    app:srcCompat="@drawable/gong2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="공무원"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_gong_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [초급] 공무원을 준비하는 왕초보라면?" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_gong_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 공무원을 준비하는 고수라면?" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/basicTrans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="59dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/trans2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="편입"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_pyun_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [초급] 보카바이블 입문자용" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_pyun_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [중급] 편머리 독해 기본 단어 500" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_pyun_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 편입 10개년 정리 빈출 단어" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/basicSat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="59dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    app:srcCompat="@drawable/su2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:layout_weight="0"
+                    android:fontFamily="@font/nanumgothic"
+                    android:text="수능"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+            <Button
+                android:id="@+id/bt_su_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [초급] 많이 노셨던 학생들을 위한 개념원리 TOP 200" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_su_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [중급] 이것만 알면 수능은 문제없다! 기본적으로 알아야 할 단어 모음" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_su_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [중급] 안정적인 점수를 위한 우선순위 영단어" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+
+            <Button
+                android:id="@+id/bt_su_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/nanumgothic"
+                android:text="   [고급] 시험장에 들어가기 전에 꼭 봐야할 단어" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#999"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

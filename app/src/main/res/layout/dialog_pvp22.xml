@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no"
+    android:layout_width="wrap_content"
+    android:layout_height="250dp"
+    android:background="@drawable/pvp_exit"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/nanumgothic"
+        android:gravity="center"
+        android:text="항복하시면 자동으로 게임에서 패하게 돼요!\n그래도 괜찮아요?"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:id="@+id/yes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+</LinearLayout>
